@@ -408,9 +408,10 @@ void camCtrl::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
     // TODO:  在此添加消息处理程序代码和/或调用默认值
     if(pScrollBar->GetDlgCtrlID() == IDC_SLIDER_EXPOSURETIME) {
         // nPos就是此时滑杆的位置，显示到 CEdit 就可以了 
-        char temp[30];
-        sprintf_s(temp, 30, "%d", nPos);
-        GetDlgItem(IDC_EDIT_EXPO)->SetWindowText(temp);
+        //char temp[30];
+        //sprintf_s(temp, 30, "%d", nPos);
+        //GetDlgItem(IDC_EDIT_EXPO)->SetWindowText(temp);
+        SetDlgItemInt(IDC_EDIT_EXPO, nPos);
         if(m_pParentDlg->m_bIsRunning) {
             m_xiCam.SetExposureTime(nPos);
         }
@@ -418,11 +419,7 @@ void camCtrl::OnHScroll(UINT nSBCode, UINT nPos, CScrollBar* pScrollBar)
     }
     if(pScrollBar->GetDlgCtrlID() == IDC_SLIDER_GAIN) {
         // nPos就是此时滑杆的位置，显示到 CEdit 就可以了 
-        char temp[30];
-        sprintf_s(temp, 30, "%d", nPos);
-        //或者 获取 Slider 当前位置 
-        //sprintf_s(temp, 30, "%d", ((CSliderCtrl*)pScrollBar)->GetPos());
-        GetDlgItem(IDC_EDIT_GAIN)->SetWindowText(temp);
+        SetDlgItemInt(IDC_EDIT_GAIN, nPos);
         if(m_pParentDlg->m_bIsRunning) {
             m_xiCam.SetGain(nPos);
         }
@@ -445,8 +442,6 @@ void camCtrl::OnNMReleasedcaptureSliderExposuretime(NMHDR *pNMHDR, LRESULT *pRes
 void camCtrl::OnNMReleasedcaptureSliderGain(NMHDR *pNMHDR, LRESULT *pResult)
 {
     // TODO:  在此添加控件通知处理程序代码
-    if(!m_pParentDlg->m_bIsRunning)
-        return;
     CSliderCtrl* pSlider = (CSliderCtrl*)GetDlgItem(IDC_SLIDER_GAIN);
     SetDlgItemInt(IDC_EDIT_GAIN, pSlider->GetPos());
     if(m_pParentDlg->m_bIsRunning) {
@@ -459,8 +454,6 @@ void camCtrl::OnNMReleasedcaptureSliderGain(NMHDR *pNMHDR, LRESULT *pResult)
 void camCtrl::OnNMReleasedcaptureSlideFramerate(NMHDR *pNMHDR, LRESULT *pResult)
 {
     // TODO:  在此添加控件通知处理程序代码
-    if(!m_pParentDlg->m_bIsRunning)
-        return;
     CSliderCtrl* pSlider = (CSliderCtrl*)GetDlgItem(IDC_SLIDE_FRAMERATE);
     SetDlgItemInt(IDC_EDIT_FRAME, pSlider->GetPos());
     if(m_pParentDlg->m_bIsRunning) {

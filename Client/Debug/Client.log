@@ -1,0 +1,29 @@
+﻿生成启动时间为 2018/6/19 9:22:48。
+     1>项目“C:\Users\Yang\Documents\GitHub\XiMeaCamera_MFC\Client\Client.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\Client.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\Client.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt camCtrl.cpp Client.cpp ClientDlg.cpp MyRectTracker.cpp NetSetting.cpp roidefine.cpp RulerPicCtrl.cpp TCPClientListenerClass.cpp xiApiPlusOcv.cpp
+         xiApiPlusOcv.cpp
+     1>c:\users\yang\documents\github\ximeacamera_mfc\client\xiapiplusocv.hpp(179): fatal error C1083: 无法打开包括文件: “opencv2/core.hpp”: No such file or directory
+         TCPClientListenerClass.cpp
+     1>c:\users\yang\documents\github\ximeacamera_mfc\client\rulerpicctrl.h(2): fatal error C1083: 无法打开包括文件: “opencv2\opencv.hpp”: No such file or directory
+         RulerPicCtrl.cpp
+     1>c:\users\yang\documents\github\ximeacamera_mfc\client\rulerpicctrl.h(2): fatal error C1083: 无法打开包括文件: “opencv2\opencv.hpp”: No such file or directory
+         roidefine.cpp
+     1>c:\users\yang\documents\github\ximeacamera_mfc\client\camctrl.h(7): fatal error C1083: 无法打开包括文件: “opencv2/opencv.hpp”: No such file or directory
+         NetSetting.cpp
+     1>c:\users\yang\documents\github\ximeacamera_mfc\client\rulerpicctrl.h(2): fatal error C1083: 无法打开包括文件: “opencv2\opencv.hpp”: No such file or directory
+         MyRectTracker.cpp
+         ClientDlg.cpp
+     1>c:\users\yang\documents\github\ximeacamera_mfc\client\rulerpicctrl.h(2): fatal error C1083: 无法打开包括文件: “opencv2\opencv.hpp”: No such file or directory
+         Client.cpp
+     1>c:\users\yang\documents\github\ximeacamera_mfc\client\rulerpicctrl.h(2): fatal error C1083: 无法打开包括文件: “opencv2\opencv.hpp”: No such file or directory
+         camCtrl.cpp
+     1>c:\users\yang\documents\github\ximeacamera_mfc\client\camctrl.h(7): fatal error C1083: 无法打开包括文件: “opencv2/opencv.hpp”: No such file or directory
+         正在生成代码...
+     1>已完成生成项目“C:\Users\Yang\Documents\GitHub\XiMeaCamera_MFC\Client\Client.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:04.63

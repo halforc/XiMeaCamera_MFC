@@ -234,7 +234,6 @@ void CRulerPicCtrl::setRulerWidth(int width)
         m_fontHeight = m_rulerWidth - 10;
         Invalidate();
     }
-
 }
 
 CRect CRulerPicCtrl::getPictrueRect()
@@ -258,7 +257,7 @@ int CRulerPicCtrl::Mat2CImage(cv::Mat* mat, CImage &img)
     uchar* pdst = (uchar*)img.GetBits();
     int imgPitch = img.GetPitch();
     for(int y = 0; y < mat->rows; y++) {
-        memcpy(pdst, psrc, mat->cols*mat->channels());//mat->step is incorrect for those images created by roi (sub-images!)  
+        memcpy(pdst, psrc, mat->cols*mat->channels());
         psrc += mat->step;
         pdst += imgPitch;
     }
